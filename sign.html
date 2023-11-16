@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign_up page</title>
+    <link rel="stylesheet" href="/payment_syatem/sign.css">
+</head>
+<body>
+    <div class="main">
+        <a href="/payment_syatem/login.html"  class="butto">Log In</a>
+        <div class="login">
+            <div class="log">Sign Up</div>
+            <input type="email" name="email" class="box" placeholder="Enter Email" id="ema">
+            <input type="password" name="password" class="box" placeholder="Enter password" id="pa">
+            <input type="password" name="password" class="box" placeholder="Confirm password" id="pac">
+            <button   id="submit" onclick="
+            let tr=document.querySelector(`#ema`);
+            let rt=localStorage.getItem(tr.value);
+
+            
+            if(rt!==null)
+            {
+                    alert(`Register Sucessful`);
+            }
+            else
+            {
+                 // let em=document.querySelector(#ema);
+                 let pa1=document.querySelector(`#pa`);
+                 let pa2=document.querySelector(`#pac`);
+                 if(pa1.value===pa2.value)
+                 {
+                       localStorage.setItem(tr.value,pa1.value);
+                 }
+                 else
+                 {
+                     alert(`password are not same`);
+                 }
+ 
+            }
+            " >submit</button>
+            
+        </div>
+        
+        
+        
+    </div>
+</body>
+</html>

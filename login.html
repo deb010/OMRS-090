@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login_page</title>
+    <link rel="stylesheet" href="/payment_syatem/login.css">
+</head>
+<body>
+    
+        <div class="main">
+            <a href="/payment_syatem/sign.html"  class="butto">Sign Up</a>
+            <div class="login">
+                <div class="log">Login</div>
+                <input type="email" name="email" class="box" id="email" placeholder="Enter Email">
+                <input type="password" name="password" class="box" id="password" placeholder="Enter password">
+                <p>Forgrt_password <a href="#">Click</a></p>
+                <button id="submit" onclick="
+                let re=document.querySelector(`#email`);
+                if(isdefind(re.value))
+                {
+                 let pa=document.querySelector(`#password`);
+                 let ew=localStorage.getItem(re.value);
+                 if(ew===pa.value)
+                 {
+                    location.href='/payment_syatem/home.html';;
+                    
+                 }
+                 else
+                 {
+                         printerror();
+                 }
+                }
+                else
+                {printerror();}
+                " >Login</> 
+                
+            </div>
+            
+            
+            
+        </div>
+        <script>
+            function isdefind(lo)
+            {   
+                if(localStorage.getItem(lo)!==undefined)
+                return true;
+                else
+                return false;
+            }
+            function printerror()
+            {
+                  alert(`invalid email or passward `);
+            }
+            function printsahi()
+            {
+                  alert(`sab kuch sahi chal raha hai `);
+            }
+        </script>
+</body>
+</html>
